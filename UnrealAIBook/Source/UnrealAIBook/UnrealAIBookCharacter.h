@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "BehaviorTree/BehaviorTree.h"
 #include "UnrealAIBookCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -29,6 +30,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	//** Behavior Tree for an AI Controller (Added in Chapter 2)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, category = AI)
+		UBehaviorTree* BehaviorTree;
 protected:
 
 	/** Resets HMD orientation in VR. */
