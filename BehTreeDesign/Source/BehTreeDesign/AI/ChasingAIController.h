@@ -22,7 +22,9 @@ class BEHTREEDESIGN_API AChasingAIController : public AAIController
 	AChasingAIController();
 	
 public:
+	UPROPERTY(BlueprintReadOnly)
 	FVector LastKnownPlayerPosition;
+	UPROPERTY(BlueprintReadOnly)
 	bool bCanSeePlayer;
 
 protected:
